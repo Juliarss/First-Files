@@ -1,0 +1,39 @@
+player kills another player that is not in the same faction as him (Alli vs Horde, Horde vs Alli) he gets 10 gold from the person who died. And also has a 30% chance to get a PVP Token.
+
+#include "StdAfx.h"
+#include "Setup.h"
+
+#define GOLD_AMOUNT 100000 //Amount of gold that player gets and victim loses
+//Example: If you want them to get/lose 100 gold, you take 10000 x 100 which would be 1000000 copper
+#define PVP_TOKEN 29434 //The Item ID of the PVP Token
+#define DROP_CHANCE1 30 //Put the Drop Percent you want
+
+void onPvpKill(Player* plr, Player* victim)
+{
+if( plr->GetTeam() != victim->GetTeam())
+{
+int32 gold_check_p = plr->GetUInt32Value( PLAYER_FIELD_COINAGE );
+int32 gold_check_v = victim->GetUInt32Value( PLAYER_FIELD_COINAGE );
+int32 new_gold_p = gold_check_p + GOLD_AMOUNT;
+int32 new_gold_v;
+if(gold_check_v < GOLD_AMOUNT)
+{
+new_gold_v = 0;
+}
+else
+{
+new_gold_v = gold_check_v - GOLD_AMOUNT;
+}
+plr->SetUInt32Value( PLAYER_FIELD_COINAGE, new_gold_p );
+victim->SetUInt32Value( PLAYER_FIELD_COINAGE, new_gold_v );
+
+int chance = RandomUInt(99)+1;
+#define DROP_CHANCE2 DROP_CHANCE1+1
+if(chance < DROP_CHANCE2) //30% drop rate
+plr->GetItemInterface()->AddItemToFreeSlot(objmgr.CreateItem(PVP_TOKEN, plr));
+}
+}
+void SetupPvPToken(ScriptMgr * mgr)
+{
+mgr->register_hook(SERVER_HOOK_EVENT_ON_KILL_PLAYER, (void*)onPvpKill);
+}

@@ -1,0 +1,5 @@
+ //Firestarter
++       sp = dbcSpell.LookupEntryForced( 44442 );
++       sp = dbcSpell.LookupEntryForced( 44443 );
++       if( sp != NULL )
++            sp->procFlags = PROC_ON_CAST_SPELL;

@@ -1,0 +1,87 @@
+BODY {
+MARGIN: 0px 0px 20px;
+background:#cecece;
+PADDING: 0px;
+font-size:11px;
+font-family:verdana,arial;
+
+}
+A {         TEXT-DECORATION: underline  }
+A:link {           COLOR: #0f314e     }
+A:visited {         COLOR: #999999   }
+A:active {          COLOR: #0f314e     }
+A:hover {             COLOR: #b22222  }
+
+#container {
+        MARGIN-TOP: 50px;
+        MARGIN-LEFT: auto;
+        WIDTH: 90%;
+        MARGIN-RIGHT: auto;
+        background:#ffffff;
+}
+
+
+#logo{
+        /*background:#d1c7ac;
+        height:100px;
+        WIDTH: 600px;
+        MARGIN-LEFT: auto;
+        MARGIN-RIGHT: auto;
+        margin-top:10px; */
+        background-image:url('logos.gif');
+        height:129px;
+
+}
+
+
+form{
+padding: 0px;
+margin:0px;
+}
+
+#sx{
+background:#fbf4e2;
+        MARGIN-LEFT: 15px;
+        WIDTH: 400px;
+        float:left;
+        padding: 5px;
+}
+
+#dx{
+background:#ffffff;
+        WIDTH: 230px;
+        padding: 5px;
+}
+
+.intestazione{
+background:#B5AD96;
+        WIDTH: 90%;
+        padding: 5px;
+}
+
+.altro{
+background:#EDe8dc;
+WIDTH: 90%;
+padding: 5px;
+}
+
+#bianco{
+background:#ffffff;
+clear:both;
+ height:30px;
+}
+
+form{
+padding: 0px;
+margin:0px;
+}
+
+input,select,textarea{
+font-size:12px;
+}
+
+
+TR,TD {
+font-size:10px;
+font-family:verdana,arial;
+}

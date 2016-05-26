@@ -1,0 +1,13 @@
+Title: Online Shopping website
+Description: this code enables u to login as admin and as a user
+admin can perform the following:
+add product
+edit products
+edit reviews
+edit orders
+user:
+purchase 
+edit profile
+cancel order
+
+The author may have retained certain copyrights to this code...please observe their request and the law by reviewing all copyright conditions at the above URL.

@@ -1,0 +1,6 @@
+  // Damage Shield
++        sp = dbcSpell.LookupEntryForced( 2246 );
++        if( sp != NULL )
++        {
++            sp->procFlags = PROC_ON_MELEE_ATTACK_VICTIM; // I know this isn't correct, should proc  when attacked
++        }

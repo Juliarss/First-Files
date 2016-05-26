@@ -1,0 +1,2 @@
+How to Run these C++ Projects ?
+You can run this  projects using any C++ compiler. You can use Turbo C, Code Lite or Boroland C++ etc, just download source file and compile. As turbo C has some limitations on new operating system such as Windows vista and later, So use other compilers on these operating systems.

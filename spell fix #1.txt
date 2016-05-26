@@ -1,0 +1,9 @@
+//warlock - Improved Succubus
+			case 18754:
+			case 18755: //other ranks?
+			case 18756: //other ranks?
+				{
+					sp->c_is_flags |= SPELL_FLAG_IS_CASTED_ON_PET_SUMMON_ON_PET;
+					sp->EffectImplicitTargetA[0] = EFF_TARGET_PET;
+					sp->EffectImplicitTargetA[1] = EFF_TARGET_PET;
+				}break;

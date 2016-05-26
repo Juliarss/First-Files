@@ -1,0 +1,2 @@
+configura parametri config.php e admin/config.php
+chmod 777 cartella "images" e "uploads"

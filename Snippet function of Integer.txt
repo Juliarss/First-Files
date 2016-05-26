@@ -1,0 +1,92 @@
+SNIPET (FUNCTION OF INTEGER RAISED IN POWER^^)
+
+#include <stdio.h>
+ 
+int power(int b, int e);
+ 
+int main()
+ 
+{
+ 
+/* n= positive integer e= power, S=  sum of integers raised in e power*/
+ 
+int e,n,i,S=0;
+ 
+/*Input e and n. Control that the   inputs are positive numbers*/
+ 
+printf (\\"Enter the last number (n)  of  the series\n\\");
+ 
+scanf (\\"%d\\", &n);
+ 
+   if (n<=0) /* if n is a negative  number*/
+ 
+   {
+ 
+   printf (\\"Error. You gave a  negative number. Program ends.\n\\");
+ 
+   return 0;
+ 
+   }
+ 
+printf (\\"Input the number to be the  power\n\\");
+ 
+scanf (\\"%d\\", &e);
+ 
+   if (e<=0) /* if n is a negative  number*/
+ 
+   {
+ 
+    printf (\\"Error. You gave a  negative number. Program ends.\n\\");
+ 
+    return 0;
+ 
+   }
+ 
+/* Calling function power n times*/
+ 
+   for (i=1; i<=n; i++)
+ 
+   {
+ 
+   S += power (i,e);
+   }
+ 
+printf (\\"The sum of the 1-%d series  of integers raised in %d is %d\\", n,e,  S);
+ 
+return 0;
+ 
+}
+ 
+/*Fuction to calculate a number raised  in power*/
+ 
+int power(int b, int e)
+ 
+{
+ 
+int power=1;
+ 
+int i;
+ 
+if (b<=0)
+ 
+   {
+       return -1;
+   }
+ 
+if (e<=0)
+ 
+   {
+       return -1;
+   }
+ 
+for (i=1; i<=e;i++)
+ 
+   {
+ 
+   power*=b;
+ 
+   }
+ 
+return (power);
+ 
+} 
